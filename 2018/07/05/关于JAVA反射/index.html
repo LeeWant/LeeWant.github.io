@@ -501,10 +501,112 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h3 id="反射的定义"><a href="#反射的定义" class="headerlink" title="反射的定义:"></a>反射的定义:</h3><p>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。</p>
-<h3 id="自己的理解："><a href="#自己的理解：" class="headerlink" title="自己的理解："></a>自己的理解：</h3><p>java会在编译时将类的信息保存到堆中，反射便是获取的编译时保存的类的信息，反射不是该类的实例，反射更应该理解成类的图 纸。通过这张图纸可以获取反射映射的类的所有信息，也可以通过这张图纸创建一个实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//动态调用method</span><br><span class="line">Method method = stuClass.getDeclaredMethod(&quot;setName&quot;, String.class);</span><br><span class="line">method.invoke(stu1, &quot;Lee&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>通过动态调用的方式可以使得程序更为的灵活，如果想要调用私有的方法和属性可以通过setAccessible来关闭安全检测。</p>
-<h3 id="反射的效率"><a href="#反射的效率" class="headerlink" title="反射的效率"></a>反射的效率</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">package com.lee.myTest;</span><br><span class="line"></span><br><span class="line">public class Student &#123;</span><br><span class="line">	private int id;</span><br><span class="line">	private String name;</span><br><span class="line">	private int age;</span><br><span class="line">	//默认构造方法一定得有</span><br><span class="line">	public Student()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Student(int id, String name, int age) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.id = id;</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public int getId() &#123;</span><br><span class="line">		return id;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setId(int id) &#123;</span><br><span class="line">		this.id = id;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getName() &#123;</span><br><span class="line">		return name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getAge() &#123;</span><br><span class="line">		return age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAge(int age) &#123;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package com.lee.myTest;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line">public class TestReflex &#123;</span><br><span class="line">	</span><br><span class="line">	//通过普通调用执行</span><br><span class="line">	public static void test01()&#123;</span><br><span class="line">		Student student = new Student();</span><br><span class="line">		long startTime = System.currentTimeMillis();</span><br><span class="line">		for(int i = 0;i &lt; 1000000000;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			student.getAge();</span><br><span class="line">		&#125;</span><br><span class="line">		long endTime = System.currentTimeMillis();</span><br><span class="line">		System.out.println(endTime-startTime+&quot;ms&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	//通过反射执行</span><br><span class="line">	public static void test02()&#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			//通过反射获取实例</span><br><span class="line">			Class&lt;Student&gt; c = (Class&lt;Student&gt;) Class.forName(&quot;com.lee.myTest.Student&quot;);</span><br><span class="line">			Student stu = c.newInstance();</span><br><span class="line">			Method m = c.getDeclaredMethod(&quot;getId&quot;);</span><br><span class="line">			long startTime = System.currentTimeMillis();</span><br><span class="line">			for(int i = 0; i &lt; 1000000000;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				m.invoke(stu);</span><br><span class="line">			&#125;</span><br><span class="line">			long endTime = System.currentTimeMillis();</span><br><span class="line">			System.out.println(endTime-startTime+&quot;ms&quot;);</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	//通过反射执行(关闭安全检查)</span><br><span class="line">	public static void test03()&#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			//通过反射获取实例</span><br><span class="line">			Class&lt;Student&gt; c = (Class&lt;Student&gt;) Class.forName(&quot;com.lee.myTest.Student&quot;);</span><br><span class="line">			Student stu = c.newInstance();</span><br><span class="line">			Method m = c.getDeclaredMethod(&quot;getId&quot;);</span><br><span class="line">			m.setAccessible(true);//关闭安全检查</span><br><span class="line">			long startTime = System.currentTimeMillis();</span><br><span class="line">			for(int i = 0; i &lt; 1000000000;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				m.invoke(stu);</span><br><span class="line">			&#125;</span><br><span class="line">			long endTime = System.currentTimeMillis();</span><br><span class="line">			System.out.println(endTime-startTime+&quot;ms&quot;);</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		test01();</span><br><span class="line">		test02();</span><br><span class="line">		test03();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="关于输出结果"><a href="#关于输出结果" class="headerlink" title="关于输出结果"></a>关于输出结果</h4><p>对于不同的电脑可能会有不同的结果，setAccessible为true可以提高反射的运行效率，并且可以访问到被private修饰的变量。</p>
+<h3 id="自己的理解："><a href="#自己的理解：" class="headerlink" title="自己的理解："></a>自己的理解：</h3><p>java会在编译时将类的信息保存到堆中，反射便是获取的编译时保存的类的信息，反射不是该类的实例，反射更应该理解成类的图 纸。通过这张图纸可以获取反射映射的类的所有信息，也可以通过这张图纸创建一个实例。</p>
+<pre><code>    //动态调用method
+    Method method = stuClass.getDeclaredMethod(&quot;setName&quot;, String.class);
+    method.invoke(stu1, &quot;Lee&quot;);
+</code></pre><p>通过动态调用的方式可以使得程序更为的灵活，如果想要调用私有的方法和属性可以通过setAccessible来关闭安全检测。</p>
+<h3 id="反射的效率"><a href="#反射的效率" class="headerlink" title="反射的效率"></a>反射的效率</h3><pre><code>package com.lee.myTest;
+
+public class Student {
+    private int id;
+    private String name;
+    private int age;
+    //默认构造方法一定得有
+    public Student(){
+    }
+
+    public Student(int id, String name, int age) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+
+}
+
+package com.lee.myTest;
+
+import java.lang.reflect.Method;
+
+public class TestReflex {
+
+    //通过普通调用执行
+    public static void test01(){
+        Student student = new Student();
+        long startTime = System.currentTimeMillis();
+        for(int i = 0;i &lt; 1000000000;i++)
+        {
+            student.getAge();
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println(endTime-startTime+&quot;ms&quot;);
+    }
+    //通过反射执行
+    public static void test02(){
+        try {
+            //通过反射获取实例
+            Class&lt;Student&gt; c = (Class&lt;Student&gt;) Class.forName(&quot;com.lee.myTest.Student&quot;);
+            Student stu = c.newInstance();
+            Method m = c.getDeclaredMethod(&quot;getId&quot;);
+            long startTime = System.currentTimeMillis();
+            for(int i = 0; i &lt; 1000000000;i++)
+            {
+                m.invoke(stu);
+            }
+            long endTime = System.currentTimeMillis();
+            System.out.println(endTime-startTime+&quot;ms&quot;);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    //通过反射执行(关闭安全检查)
+    public static void test03(){
+        try {
+            //通过反射获取实例
+            Class&lt;Student&gt; c = (Class&lt;Student&gt;) Class.forName(&quot;com.lee.myTest.Student&quot;);
+            Student stu = c.newInstance();
+            Method m = c.getDeclaredMethod(&quot;getId&quot;);
+            m.setAccessible(true);//关闭安全检查
+            long startTime = System.currentTimeMillis();
+            for(int i = 0; i &lt; 1000000000;i++)
+            {
+                m.invoke(stu);
+            }
+            long endTime = System.currentTimeMillis();
+            System.out.println(endTime-startTime+&quot;ms&quot;);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        test01();
+        test02();
+        test03();
+    }
+}
+</code></pre><h4 id="关于输出结果"><a href="#关于输出结果" class="headerlink" title="关于输出结果"></a>关于输出结果</h4><p>对于不同的电脑可能会有不同的结果，setAccessible为true可以提高反射的运行效率，并且可以访问到被private修饰的变量。</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
