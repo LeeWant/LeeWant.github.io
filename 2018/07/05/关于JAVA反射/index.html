@@ -85,6 +85,11 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
 
     
 
@@ -238,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Thu Jul 05 2018 10:08:04 GMT+0800">
-        <meta property="article:modified_time" content="Thu Jul 05 2018 10:14:46 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jul 05 2018 10:32:00 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -261,7 +266,7 @@
     "mainEntityOfPage": "http://leewhant.github.io/2018/07/05/关于JAVA反射/index.html",
     "headline": "关于JAVA反射",
     "datePublished": "Thu Jul 05 2018 10:08:04 GMT+0800",
-    "dateModified": "Thu Jul 05 2018 10:14:46 GMT+0800",
+    "dateModified": "Thu Jul 05 2018 10:32:00 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Lee",
@@ -364,17 +369,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/java.jpg)">
     
             <p class="article-headline-p">
                 关于JAVA反射
@@ -976,10 +972,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
-    
-        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
-    
 
 
 <!-- Window Load -->
@@ -991,10 +989,13 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
-        
-        
-        HanabiBrowser.start('pre code',true);
     
 </script>
 
