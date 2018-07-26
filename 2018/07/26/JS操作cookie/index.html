@@ -47,7 +47,7 @@
     
     <title>
         
-            归档: 2018/7 | 
+            JS操作cookie | 
         
         学无止境
     </title>
@@ -58,7 +58,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="Lee的blog">
+    <meta name="keywords" content="Lee的blog,js">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -85,6 +85,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -216,7 +219,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="学无止境">
-    <meta name="msapplication-starturl" content="http://leewant.github.io/archives/2018/07/">
+    <meta name="msapplication-starturl" content="http://leewant.github.io/2018/07/26/JS操作cookie/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="学无止境">
@@ -231,13 +234,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://leewant.github.io/archives/2018/07/">
+    <meta property="og:url" content="http://leewant.github.io/2018/07/26/JS操作cookie/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018/7 | 学无止境">
+    <meta property="og:title" content="JS操作cookie | 学无止境">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="js"> 
 
+    
+        <meta property="article:published_time" content="Thu Jul 26 2018 11:57:11 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jul 26 2018 12:25:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -245,13 +251,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://leewant.github.io/archives/2018/07/index.html" />
+        <link rel="canonical" href="http://leewant.github.io/2018/07/26/JS操作cookie/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://leewant.github.io/2018/07/26/JS操作cookie/index.html",
+    "headline": "JS操作cookie",
+    "datePublished": "Thu Jul 26 2018 11:57:11 GMT+0800",
+    "dateModified": "Thu Jul 26 2018 12:25:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Lee",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/touxiang.jpg"
+        },
+        "description": "生有涯，学无涯"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "学无止境",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",jsLee的blog",
+    "description": "",
+}
+</script>
 
 
     
@@ -285,318 +321,347 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
-            
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用JS操作cookie"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用JS操作cookie</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie的组成"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">cookie的组成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#程序效果"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">程序效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#源代码"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">源代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">注意</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
                 
-                    <!-- Paradox Thumbnail -->
-                    <div class="post_entry-module mdl-card mdl-shadow--5dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/JS操作cookie/20180726122100463.png)">
+    
+            <p class="article-headline-p">
+                JS操作cookie
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Lee</strong>
+        <span>7月 26, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/js/">js</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
     
         
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
         
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/05/关于我/"><span>[Top]</span>关于我</a></p>
-    </div>
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JS操作cookie&url=http://leewant.github.io/2018/07/26/JS操作cookie/index.html&pic=http://leewant.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/05/关于我/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>7月 05, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JS操作cookie&url=http://leewant.github.io/2018/07/26/JS操作cookie/index.html&via=Lee" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
 
-            
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://leewant.github.io/2018/07/26/JS操作cookie/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
 
-            
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://leewant.github.io/2018/07/26/JS操作cookie/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
                 
-                
-            
-        
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--5dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/JS操作cookie/20180726122100463.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/26/JS操作cookie/">JS操作cookie</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/26/JS操作cookie/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>7月 26, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--5dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/blog/head/jwt.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/09/JWT的一个实现/">JWT的一个实现</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            使用经历
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/09/JWT的一个实现/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>7月 09, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--5dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/blog/head/mybatis.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/08/MyBatis缓存机制/">MyBatis缓存机制</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/08/MyBatis缓存机制/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>7月 08, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/mybatis/">mybatis</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--5dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/blog/head/java.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/05/关于JAVA反射/">关于JAVA反射</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            反射的定义:
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/05/关于JAVA反射/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/touxiang.jpg" width="44px" height="44px" alt="Lee's avatar">
-            </div>
-            <div>
-                <strong>Lee</strong>
-                <span>7月 05, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
+        <h2 id="使用JS操作cookie"><a href="#使用JS操作cookie" class="headerlink" title="使用JS操作cookie"></a>使用JS操作cookie</h2><p>通过使用Js来操作cookie加深对cookie的理解</p>
+<h3 id="cookie的组成"><a href="#cookie的组成" class="headerlink" title="cookie的组成"></a>cookie的组成</h3><p>名称和值 name = value：必填。name和value都是字符序列，除非包含在双引号内，否则不包括分号、逗号、等号和空格。Web服务器可以创建任意的name=value关联，浏览器在后继对站点的访问中会将其送会给web服务器。</p>
+<p>域  domain：可选。表示该cookie对于哪个域是有效的。所有向该域发送的请求中都会包含这个cookie信息。这个值可以包含子域。</p>
+<p>路径  path：可选。通过这个字段可以为服务器上特定的文档分配cookie。如果path字段是一个URL路径前缀，就可以附加一个cookie。例如：路径 /foo与 /foobar和 /foo/bar.html相匹配。路径 / 与域名中的所有内容都匹配。默认值是设置 Cookie 时的当前目录。</p>
+<p>失效时间  expires（新版的cookie规范中是max-age字段）：可选。这个字段会指定一个日期字符串，用来定义cookie的实际生存期。一旦到了这个日期，就不再存储或发布这个cookie了，该cookie就会被删除。如果设置的日期是以前的时间，则cookie会被立刻删除。</p>
+<p>日期格式为GMT格式：Wdy, DD-Mon-YYYY HH:MM:SS GMT。</p>
+<p>安全标志  secure：可选。该字段不是键值对的形式，如果要指定该字段，只要在设置cookie时添加secure字符即可。设置了该字段后，该cookie只有在使用SSL连接的时候才发送到服务器。例如：指定域为(<a href="http://www.exmaple.com)的cookie，在制定了secure字段后，该cookie只能发送给(https://www.exmaple.com)，而发送给(http://www.exmaple.com)的请求不会添加该cookie。" target="_blank" rel="noopener">www.exmaple.com)的cookie，在制定了secure字段后，该cookie只能发送给(https://www.exmaple.com)，而发送给(http://www.exmaple.com)的请求不会添加该cookie。</a></p>
+<h3 id="程序效果"><a href="#程序效果" class="headerlink" title="程序效果"></a>程序效果</h3><ol>
+<li>在对话框中输入cookie的值<br><img src="/JS操作cookie/20180726120506885.png" alt=""></li>
+<li>点击Go To Cookie Test Page 2<br><img src="/JS操作cookie/20180726120616874.png" alt=""></li>
+<li>可以在控制台查看cookie<br><img src="/JS操作cookie/20180726120716609.png" alt=""></li>
+</ol>
+<h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><p>cookie.js</p>
+<pre><code>//创建cookie
+function createCookies(name, value, days, path, domain, secure) {
+    //设置过期时间UTC格式和GMT格式都可以
+    if(days) {
+        var date = new Date()
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+        var expires = date.toUTCString()
+    } else var expires = &quot;&quot;
+    var cookieString = name + &quot;=&quot;
+    if(value) cookieString += escape(value) + &quot;; &quot;
+    if(expires) cookieString += &quot;expires=&quot; + expires + &quot;; &quot;
+    if(path) cookieString += &quot;path=&quot; + escape(path) + &quot;; &quot;
+    if(domain) cookieString += &quot;domain=&quot; + escape(domain) + &quot;; &quot;
+    if(secure) cookieString += &quot;secure=&quot; + escape(secure) + &quot;; &quot;
+    document.cookie = cookieString
+}
+//通过key值获取cookie的value值
+function getCookie(name) {
+    console.log(&quot;getCookies&quot;)
+    var nameEquals = name + &quot;=&quot;
+    var crumbs = document.cookie.split(&#39;;&#39;)
+    //通过for语句遍历cookie
+    for(var i = 0; i &lt; crumbs.length; i++) {
+        var crumb = crumbs[i]
+        if(crumb.indexOf(nameEquals) == 0) {
+            return unescape(crumb.substring(nameEquals.length, crumb.length))
+        }
     }
-</script>
+    return null
+}
+//获取cookie同上一样的用法只是使用的for循环不一样
+function getCookies(name) {
+    name += &quot;=&quot;
+    console.log(name)
+    var cookies = document.cookie.split(&#39;;&#39;)
+    //通过for-in遍历cookie
+    for(x in cookies) {
+        if(cookies[x].startsWith(name))
+            return unescape(cookies[x].substring(name.length, cookies[x].length))
+    }
+    return null
+}
+//删除cookie
+function deleteCookies(name) {
+    createCookies(name, &quot;&quot;, -1)
+}
+</code></pre><p>cookietest1.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;cookiesTest01&lt;/title&gt;
+        &lt;script src=&quot;cookies.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            window.onload = function(){
+                var cookieName = &quot;name&quot;
+                var cookieValue = prompt(&quot;Cookie Value&quot;)
+                createCookies(cookieName,cookieValue)
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href=&quot;cookietest2.html&quot;&gt;Go to Cookie Test Page 2&lt;/a&gt;        
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>cookietest2.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;cookies page 2&lt;/title&gt;
+        &lt;script src=&quot;cookies.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            window.onload = function(){
+                document.getElementById(&quot;output&quot;).innerHTML = &quot;your cookie value: &quot; + getCookies(&quot;name&quot;);
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href=&quot;cookietest1.html&quot;&gt;Back to Cookie Test Page 1&lt;/a&gt;&lt;br /&gt;
+        &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>Q：为什么本地测试无法获取到cookie的值？<br><img src="/JS操作cookie/20180726121443753.png" alt=""><br>A：在本地测试的环境下，浏览器默认关闭了cookie的使用<br>解决方法：将文件上传到服务器，或着上传到tomcat通过tomcat进行测试<br><img src="/JS操作cookie/20180726121644075.png" alt=""></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            版权声明： 本文由Lee创作和发表,采用署名(BY)-非商业性使用(NC)-相同方式共享(SA)国际许可协议进行许可,转载请注明作者及出处
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://leewant.github.io/2018/07/26/JS操作cookie/">http://leewant.github.io/2018/07/26/JS操作cookie/</a>
+                    </p>
+                </blockquote>
+        
+    
 
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzgzNi8xNDM2Nw==">
+	<script type="text/ls-javascript" id="livere-comment-js">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/07/09/JWT的一个实现/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -896,6 +961,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -908,6 +977,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
