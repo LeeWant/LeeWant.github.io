@@ -47,7 +47,7 @@
     
     <title>
         
-            JWT的一个实现 | 
+            Spring学习中的问题 | 
         
         学无止境
     </title>
@@ -58,7 +58,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="Lee的blog,java">
+    <meta name="keywords" content="Lee的blog">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -219,7 +219,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="学无止境">
-    <meta name="msapplication-starturl" content="http://leewant.github.io/2018/07/09/JWT的一个实现/">
+    <meta name="msapplication-starturl" content="http://leewant.github.io/2018/08/05/Spring学习中的问题/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="学无止境">
@@ -234,16 +234,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://leewant.github.io/2018/07/09/JWT的一个实现/">
+    <meta property="og:url" content="http://leewant.github.io/2018/08/05/Spring学习中的问题/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="JWT的一个实现 | 学无止境">
+    <meta property="og:title" content="Spring学习中的问题 | 学无止境">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="java"> 
+    
 
     
-        <meta property="article:published_time" content="Mon Jul 09 2018 13:02:55 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jul 30 2018 16:10:14 GMT+0800">
+        <meta property="article:published_time" content="Sun Aug 05 2018 16:22:01 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 05 2018 16:23:36 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -251,7 +251,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://leewant.github.io/2018/07/09/JWT的一个实现/index.html" />
+        <link rel="canonical" href="http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -263,10 +263,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://leewant.github.io/2018/07/09/JWT的一个实现/index.html",
-    "headline": "JWT的一个实现",
-    "datePublished": "Mon Jul 09 2018 13:02:55 GMT+0800",
-    "dateModified": "Mon Jul 30 2018 16:10:14 GMT+0800",
+    "mainEntityOfPage": "http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html",
+    "headline": "Spring学习中的问题",
+    "datePublished": "Sun Aug 05 2018 16:22:01 GMT+0800",
+    "dateModified": "Sun Aug 05 2018 16:23:36 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Lee",
@@ -284,7 +284,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaLee的blog",
+    "keywords": "Lee的blog",
     "description": "",
 }
 </script>
@@ -350,7 +350,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用经历"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用经历</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Token-java-token类"><span class="post-toc-number">2.</span> <span class="post-toc-text">Token.java(token类)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JWT-java-JWT的工具类"><span class="post-toc-number">3.</span> <span class="post-toc-text">JWT.java(JWT的工具类)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">4.</span> <span class="post-toc-text">注意事项</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Spring-MVC"><span class="post-toc-number">1.</span> <span class="post-toc-text">Spring MVC</span></a></li></ol>
     </ul>
     
 
@@ -369,11 +369,20 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/blog/head/jwt.jpg)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
-                JWT的一个实现
+                Spring学习中的问题
             </p>
         </div>
 
@@ -392,7 +401,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Lee</strong>
-        <span>7月 09, 2018</span>
+        <span>8月 05, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -409,15 +418,6 @@
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/java/">java</a>
-    </ul>
     
 
     <!-- Share -->
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JWT的一个实现&url=http://leewant.github.io/2018/07/09/JWT的一个实现/index.html&pic=http://leewant.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Spring学习中的问题&url=http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html&pic=http://leewant.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JWT的一个实现&url=http://leewant.github.io/2018/07/09/JWT的一个实现/index.html&via=Lee" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Spring学习中的问题&url=http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html&via=Lee" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://leewant.github.io/2018/07/09/JWT的一个实现/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://leewant.github.io/2018/07/09/JWT的一个实现/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://leewant.github.io/2018/08/05/Spring学习中的问题/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -496,138 +496,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="使用经历"><a href="#使用经历" class="headerlink" title="使用经历"></a>使用经历</h3><p>前段时间做Android后台Rest接口开发时，需要验证客户端的身份信息所以进行了学习。今天正好有人问到了博主关于JWT的使用所以就在这里记录下JWT的一个使用场景。</p>
-<p>话不多说直接上源码</p>
-<h3 id="Token-java-token类"><a href="#Token-java-token类" class="headerlink" title="Token.java(token类)"></a>Token.java(token类)</h3><pre><code>import lombok.Data;
-
-@Data
-public class Token {
-    private Integer userId;
-    private String email;
-
-    public Token() {
-    }
-
-    public Token(Integer userId, String email) {
-        this.userId = userId;
-        this.email = email;
-    }
-}
-
-</code></pre><h3 id="JWT-java-JWT的工具类"><a href="#JWT-java-JWT的工具类" class="headerlink" title="JWT.java(JWT的工具类)"></a>JWT.java(JWT的工具类)</h3><pre><code>import com.auth0.jwt.JWTSigner;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.internal.com.fasterxml.jackson.databind.ObjectMapper;
-//token实体
-import com.lee.yantu.Entity.Token;
-//用户实体
-import com.lee.yantu.Entity.User;
-//这是自己写的异常枚举类
-import com.lee.yantu.enums.SystemEnum;
-import com.lee.yantu.exception.ResultException;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class JWT {
-    //这是服务端的token密码，用于加密token
-    private static final String SECRET = &quot;@#$@#$@#&quot;;
-
-    private static final String EXP = &quot;exp&quot;;
-
-    private static final String PAYLOAD = &quot;payload&quot;;
-
-    /**
-     * 私有方法，对传入的实体进行加密，并设置日期
-     *
-     * @param object the POJO object
-     * @param maxAge the milliseconds of life time
-     * @return the jwt token
-     */
-    private static &lt;T&gt; String sign(T object, long maxAge) {
-        try {
-            final JWTSigner signer = new JWTSigner(SECRET);
-            final Map&lt;String, Object&gt; claims = new HashMap&lt;String, Object&gt;();
-            ObjectMapper mapper = new ObjectMapper();
-            String jsonString = mapper.writeValueAsString(object);
-            claims.put(PAYLOAD, jsonString);
-            claims.put(EXP, System.currentTimeMillis() + maxAge);
-            return signer.sign(claims);
-        } catch (Exception e) {
-            throw new ResultException(SystemEnum.UNKNOWN_ERROR);
-        }
-    }
-
-
-
-    /**
-     * 解密token验证token的正确性
-     *
-     * @param jwt
-     * @return POJO object
-     */
-    private static &lt;T&gt; T unsign(String jwt, Class&lt;T&gt; classT) {
-        //解密token
-        final JWTVerifier verifier = new JWTVerifier(SECRET);
-        try {
-            final Map&lt;String, Object&gt; claims = verifier.verify(jwt);
-            if (claims.containsKey(EXP) &amp;&amp; claims.containsKey(PAYLOAD)) {
-                //获取过期时间
-                long exp = (Long) claims.get(EXP);
-                //获取系统时间
-                long currentTimeMillis = System.currentTimeMillis();
-                System.out.println(&quot;exp:&quot;+exp+&quot;  now:&quot;+currentTimeMillis);
-                if (exp &gt; currentTimeMillis) {
-                    String json = (String) claims.get(PAYLOAD);
-                    ObjectMapper objectMapper = new ObjectMapper();
-                    return objectMapper.readValue(json, classT);
-                }else throw new ResultException(SystemEnum.TOKEN_EXP);
-            }else throw new ResultException(SystemEnum.TOKEN_ERR);
-        } catch (Exception e) {
-            throw new ResultException(SystemEnum.TOKEN_ERR);
-        }
-    }
-
-    /**
-     * 获取加密后的token
-     * @param user
-     * @return
-     */
-    public static String getTokenString(User user){
-        Token token = new Token();
-        token.setUserId(user.getUserId());
-        token.setEmail(user.getEmail());
-        return sign(token,1*60*60*1000L); //设置过期时间默认1小时
-    }
-
-    /**
-     * 获取加密后的token，可以自己定义过期时间
-     * @param user
-     * @param time
-     * @return
-     */
-    public static String getTokenString(User user,Long time){
-        Token token = new Token();
-        token.setUserId(user.getUserId());
-        token.setEmail(user.getEmail());
-        return sign(token,time);
-    }
-
-    /**
-     * 获取解密后的token
-     * @return
-     */
-    public static Token getTokenInstance(String token){
-        return unsign(token,Token.class);
-    }
-}
-</code></pre><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p><em>注：token返回时是作为一个String类型</em></p>
-<ol>
-<li>通过String token = JWT.getTokenString(user);获取token</li>
-<li>通过JWT.getTokenInstance(token);验证token</li>
-<li>token根据业务需求自己决定存储方式（我是保存在客户端）</li>
-<li>客户端登录或着注册之后拿到属于自己的token并保存</li>
-<li>之后每次进行操作时提交token，后端获取token并进行验证</li>
-</ol>
+        <h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><p><em>1. HandlerMapping和HandlerAdapter扮演的具体角色和实现过程</em></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -636,7 +505,7 @@ public class JWT {
                             版权声明： 本文由Lee创作和发表,采用署名(BY)-非商业性使用(NC)-相同方式共享(SA)国际许可协议进行许可,转载请注明作者及出处
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://leewant.github.io/2018/07/09/JWT的一个实现/">http://leewant.github.io/2018/07/09/JWT的一个实现/</a>
+                        <strong>本文链接：</strong><a href="http://leewant.github.io/2018/08/05/Spring学习中的问题/">http://leewant.github.io/2018/08/05/Spring学习中的问题/</a>
                     </p>
                 </blockquote>
         
@@ -680,21 +549,13 @@ public class JWT {
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/07/26/JS操作cookie/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/07/08/MyBatis缓存机制/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/26/JS操作cookie/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
